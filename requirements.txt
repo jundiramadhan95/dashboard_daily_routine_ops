@@ -2,3 +2,5 @@ streamlit
 pandas
 oracledb
 st-aggrid
+matplotlib
+seaborn
