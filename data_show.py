@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Inisialisasi Oracle Instant Client
-oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_19_28")
+#oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_19_28")
 #st.write("Secrets available:", st.secrets)
 
 
@@ -18,8 +18,8 @@ def get_connection():
         # host=secrets["host"],
         # port=int(secrets["port"]),
         # service_name=secrets["service_name"]
-        dsn=f"{secrets['host']}:{secrets['port']}/{secrets['service_name']}",
-        mode=oracledb.DEFAULT_AUTH
+        dsn=f"{st.secrets['oracle']['host']}:{st.secrets['oracle']['port']}/{st.secrets['oracle']['service_name']}"
+        #mode=oracledb.DEFAULT_AUTH
     )
 
 def fetch_top6_04t():
