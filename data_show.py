@@ -4,14 +4,17 @@ import oracledb
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 # Inisialisasi Oracle Instant Client
-#oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_19_28")
+oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_19_28")
 #st.write("Secrets available:", st.secrets)
 
 
 def get_connection():
     secrets = st.secrets["oracle"]
+    if os.path.exists(r"C:\oracle\instantclient_19_28"):
+        oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_19_28")
     return oracledb.connect(
         user=secrets["user"],
         password=secrets["password"],
