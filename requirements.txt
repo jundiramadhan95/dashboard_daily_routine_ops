@@ -4,4 +4,3 @@ oracledb
 st-aggrid
 matplotlib
 seaborn
-os
