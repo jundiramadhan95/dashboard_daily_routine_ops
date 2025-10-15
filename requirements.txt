@@ -1,6 +1,6 @@
 streamlit
 pandas
 oracledb
-st-aggrid
+streamlit-aggrid
 matplotlib
 seaborn
